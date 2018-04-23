@@ -13,7 +13,7 @@ customer_id =  os.environ['WORKSPACE_ID']
 shared_key = os.environ['WORKSPACE_KEY']
 
 # The log type is the name of the event that is being submitted
-log_type = 'fpolicyname'
+log_type = 'policyname'
 
 # An example JSON web monitor object
 
