@@ -3,7 +3,7 @@ a script to load policy definition objects into oms for later use with queries
 
 The script creates a table called policyname_CL in the target oms workspace 
 it can be used as basis for policy analytics. the following scripts joins the azureActivity table to the policyname table
-'
+```
 let policynames = policyname_CL  | summarize by displayName_s, name_g;
 AzureActivity
 | where ( Type == "AzureActivity" )
@@ -14,7 +14,8 @@ AzureActivity
 | summarize  count ()  by  displayName_s, bin(TimeGenerated, 1d)
 | render  barchart   
 
-'
+```
+
 
 ## Parameters and configuration 
 The container is configured using environment varaibles 
