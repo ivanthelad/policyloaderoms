@@ -45,9 +45,9 @@ This is the password of the service principle output from the previous step
 ### SP_TENANT
 This is the TENANT of the service principle output from the previous step 
 
-#building 
+# building 
 run docker -t policyloaderoms  .
-#Running 
+# Running 
 docker run  policyloaderoms \
  -e SUBSCRIPTION=XXXX \
             -e SP_ID=XXXX \
