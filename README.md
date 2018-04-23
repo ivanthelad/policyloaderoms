@@ -16,7 +16,7 @@ AzureActivity
 
 ```
 
-![Screenshot](policy.png)
+![Policy](policy.PNG)
 ## Parameters and configuration 
 The container is configured using environment varaibles 
 
