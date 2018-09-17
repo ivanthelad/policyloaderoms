@@ -11,7 +11,7 @@ RUN AZ_REPO=$(lsb_release -cs); echo "deb [arch=amd64] https://packages.microsof
 
 RUN mkdir /oms
 WORKDIR /oms
-RUN  apt-get install python-pip -y; pip install requests;
+RUN  apt-get install python-pip gnupg2 -y; pip install requests ;
 ADD importjson.py /oms/importjson.py
 ADD entryload.sh /oms/entryload.sh
 ENTRYPOINT ["/oms/entryload.sh"]
