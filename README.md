@@ -55,3 +55,15 @@ docker run  policyloaderoms \
             -e SP_TENANT=XXXX\
             -e WORKSPACE_ID=XXXx\
             -e WORKSPACE_KEY=XXXX 
+## Running using ACI 
+The container is pushed to dockerhub under https://hub.docker.com/r/ivmckinl/policyloaderoms/ 
+and can be run using azure container instances 
+```
+ az container create      \
+ 	--resource-group devmachine     \
+	--name policyloaderoms     \
+	--image ivmckinl/policyloaderoms:latest \
+	--restart-policy OnFailure      \
+	--environment-variables SUBSCRIPTION=XXXX  SP_ID=XXX SP_PASSWORD=XXX  SP_TENANT=XXX  WORKSPACE_ID=XXX 
+  ```
+  
